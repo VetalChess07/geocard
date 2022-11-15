@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <title>Swiper demo</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+   <!-- Link Swiper's CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+   <div class="card">
+
+
+      <div class="open-popup  ">
+         <div class="point1">
+            <img src="img/point.png" class="point__img" alt="">
+            <p class="point__text">Язык Тролля</p>
+         </div>
+
+         <img src="img/img1.jpg" class="card__image" alt="">
+         <p class="card__text">Язык Тролля — каменный выступ на горе Скьеггедаль, расположенной вблизи города Одда в
+            Норвегии, возвышающийся над озером Разенган на высоте 700 метров. Своей формой выступ напоминает язык, за
+            что и получил такое название. Представляет собой отколовшийся кусок скалы, застывший на её краю в
+            горизонтальном положении. </p>
+      </div>
+      <div class="open-popup  ">
+         <div class="point2">
+            <img src="img/point.png" class="point__img" alt="">
+            <p class="point__text">Лестница троллей</p>
+         </div>
+         <img src="img/img2.jpg" class="card__image" alt="">
+         <p class="card__text">Ле́стница тро́ллей (норв. Trollstigen, в русских источниках также распространено название
+            Дорога троллей — одно из самых популярных и посещаемых туристических мест в Норвегии. Находится в
+            северной части западной Норвегии (Вестланн).</p>
+      </div>
+      <div class="open-popup  ">
+         <div class="point3">
+            <img src="img/point.png" class="point__img" alt="">
+            <p class="point__text">Музей кораблей викингов</p>
+         </div>
+         <img src="img/viking.jpg" class="card__image" alt="">
+         <p class="card__text">Музей кораблей викингов расположен на полуострове Бюгдё в пределах Осло, Является частью
+            Музея истории культуры при Университете Осло и хранит археологические находки из Туне, Гокстад, Осеберга и
+            кладбища насыпи Борре</p>
+      </div>
+      <div class="open-popup  ">
+         <div class="point4">
+            <img src="img/point.png" class="point__img" alt="">
+            <p class="point__text">Нордкап</p>
+         </div>
+
+         <img src="img/img4.jpg" class="card__image" alt="">
+         <p class="card__text">Но́рдкап — мыс на острове Магерё на севере Норвегии, в коммуне Нордкап. Высота мыса 307
+            м. Нередко также считается самой северной точкой Европы, однако, мыс расположен на острове, а к Европе
+            относят и более северные острова архипелагов Шпицберген, Земля Франца-Иосифа и Новая Земля.</p>
+      </div>
+      <div class="open-popup  ">
+         <div class="point5">
+            <img src="img/point.png" class=" point__img" alt="">
+            <p class="point__text">Сальстраумен</p>
+         </div>
+         <img src="img/img5.jpg" class="card__image" alt="">
+         <p class="card__text">Сальстраумен — приливное течение в Северной Норвегии. Происходит в проливе длиной 3 км и
+            шириной 150 м, связывающем Сальтен-фьорд и Шерстад-фьорд с морем. Считается одним из сильнейших в мире
+            приливных течений. Около 400 миллионов кубических метров воды протекают в одном цикле на скорости, доходящей
+            до 37 км/ч. Вода при этом образует водовороты диаметром до 12 метров и 4-5 метров в глубину с поверхности.
+            Происходит этот феномен четыре раза в день. Координаты: 67°13′44″ с. ш. 14°36′55″ в. д. </p>
+      </div>
+      <div class="open-popup  ">
+         <div class="point6">
+            <img src="img/point.png" class="point__img" alt="">
+            <p class="point__text">Маяк Линдеснес</p>
+         </div>
+         <img src="img/img6.jpg" class="card__image" alt="">
+         <p class="card__text">Маяк Линдеснес — береговой маяк, расположенный на одноимённом мысе в крайней южной точке
+            континентальной Норвегии. Это также самый старый из сохранившихся маяков Норвегии, изначально построенный 27
+            февраля 1655 года. Маяк занимает стратегически важное положение в проливе Скагеррак, соединяющем Северное и
+            Балтийское моря. Ближайший город — Линнеснес. Маяк относится к наиболее посещаемым достопримечательностям
+            фюльке Вест-Агдер. В 2004 году при маяке открылся музей, который одновременно используется как культурный
+            центр.</p>
+      </div>
+
+
+
+
+      <div class="popup__bg ">
+         <div class="popup">
+
+            <img src="img/viking.jpg" width="5px" height="5px" class="close-popup">
+            <img class="popup__image" src="" alt="">
+            <p class="popup__text"></p>
+         </div>
+      </div>
+
+
+
+
+      <style>
+         @keyframes slidein {
+            from {
+               margin-left: 100%;
+               width: 300%;
+            }
+
+            to {
+               margin-left: 0%;
+               width: 100%;
+            }
+         }
+
+         .card__title {
+            color: #FFF;
+            font-size: 35px;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         }
+
+         body {
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 10px;
+            background-color: rgb(0, 0, 0);
+            opacity: 2 !important;
+            z-index: -1;
+         }
+
+         .point__img {
+            width: 30px;
+            height: 30px;
+            transition: all 0.3s;
+         }
+
+         .point__img:hover {
+            width: 35px;
+            height: 35px;
+         }
+
+         .point__text {
+            font-size: 15px;
+
+            color: #FFF;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 2px !important;
+         }
+
+         .point1 {
+            position: absolute;
+            margin: 471px 30px;
+
+            opacity: 1 !important;
+            text-align: center;
+         }
+
+         .point2 {
+            position: absolute;
+            margin: 352px 61px;
+            width: 30px;
+            height: 30px;
+            opacity: 1 !important;
+         }
+
+         .point3 {
+            position: absolute;
+            margin: 416px 110px;
+            width: 30px;
+            height: 30px;
+            opacity: 1 !important;
+         }
+
+         .point4 {
+            position: absolute;
+            margin: -63px 461px;
+
+            opacity: 1 !important;
+            text-align: center;
+         }
+
+         .point5 {
+            position: absolute;
+            margin: 80px 201px;
+            width: 30px;
+            height: 30px;
+            opacity: 1 !important;
+         }
+
+         .point6 {
+            position: absolute;
+            margin: 466px 45px;
+            width: 30px;
+            height: 30px;
+            opacity: 1 !important;
+         }
+
+         .card {
+            margin-top: 100px;
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-image: url("img/card__norvegia.jpg");
+
+            background-size: contain;
+            animation-duration: 3s;
+            animation-name: slidein;
+         }
+
+
+
+         .open-popup {
+            width: 1px;
+            cursor: pointer;
+         }
+
+         .card__image {
+            width: 100%;
+            max-width: 500px;
+            object-fit: cover;
+            opacity: 0;
+         }
+
+         .card__text {
+            opacity: 0;
+            display: none;
+         }
+
+         .scroll-on {
+            background-color: red;
+            pointer-events: none;
+         }
+
+         .disable-scroll {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+         }
+
+         .popup__bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.5s all;
+            overflow: auto;
+
+         }
+
+
+         .popup__bg.active {
+            width: 100%;
+            height: 100vh;
+            opacity: 1;
+            pointer-events: all;
+            transition: 0.5s all;
+
+            overflow: auto;
+
+
+         }
+
+
+         .popup {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+
+            width: 30px;
+            height: 30px;
+            background-image: url("img/point.png");
+         }
+
+         .popup.active {
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            opacity: 3;
+            width: 100%;
+            max-width: 500px;
+            height: fit-content;
+            transform: translate(-50%, -50%) scale(1);
+            transition: 0.5s all;
+         }
+
+
+         .close-popup {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 40px;
+         }
+
+         /* .open-popup-1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background-image: url("img/point.png");
+         } */
+
+
+         .scroll-on {
+            background-color: red;
+            pointer-events: none;
+         }
+
+         .disable-scroll {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+         }
+
+         .popup__bg {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.5s all;
+            overflow: auto;
+         }
+
+
+
+
+         body.active {
+            overflow: hidden;
+         }
+
+         .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            background-color: red;
+            transform: translate(-50%, -50%) scale(0);
+            background: #fff;
+            overflow: auto;
+            padding: 25px;
+            transition: 0.5s all;
+         }
+
+
+
+
+         .close-popup {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 40px;
+         }
+
+         .popup__image {
+            width: 100%;
+            max-width: 500px;
+            object-fit: cover;
+         }
+
+         .popup__text {
+            font-size: 20px !important;
+            color: #fff !important;
+         }
+      </style>
+
+
+      <script>
+         const btnOff = document.querySelector('.open-popup'),
+            btnOn = document.querySelector('.popup'),
+            body = document.body;
+
+         let disableScroll = function () {
+            let pagePosition = window.scrollY;
+            document.body.classList.add('active');
+            document.body.dataset.position = pagePosition;
+            document.body.style.top = -pagePosition + 'px';
+         }
+
+         let enableScroll = function () {
+            let pagePosition = parseInt(document.body.dataset.position, 10);
+            document.body.style.top = 'auto';
+            document.body.classList.remove('active');
+            window.scroll({ top: pagePosition, left: 0 });
+            document.body.removeAttribute('active');
+         }
+
+         btnOff.addEventListener('click', (e) => {
+            disableScroll();
+            e.currentTarget.style.pointerEvents = 'none';
+            btnOn.style.pointerEvents = 'auto';
+         });
+
+         btnOn.addEventListener('click', (e) => {
+            enableScroll();
+            e.currentTarget.style.pointerEvents = 'none';
+            btnOff.style.pointerEvents = 'auto';
+         });
+
+         let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
+         let popup = document.querySelector('.popup'); // Само окно
+         let openPopupButtons = document.querySelectorAll('.open-popup'); // Кнопки для показа окна
+         let closePopupButton = document.querySelector('.close-popup');
+
+         console.log(body);
+
+
+
+
+         openPopupButtons.forEach((button) => { // Перебираем все кнопки
+            button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
+               e.preventDefault(); // Предотвращаем дефолтное поведение браузера
+               popupBg.classList.add('active'); // Добавляем класс 'active' для фона
+               popup.classList.add('active'); // И для самого окна
+               body.classList.add('active')
+            })
+         });
+
+         closePopupButton.addEventListener('click', () => { // Вешаем обработчик на крестик
+            popupBg.classList.remove('active'); // Убираем активный класс с фона
+            popup.classList.remove('active'); // И с окна
+            body.classList.remove('active');
+         });
+
+         document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
+            if (e.target === popupBg) { // Если цель клика - фот, то:
+               popupBg.classList.remove('active'); // Убираем активный класс с фона
+               popup.classList.remove('active'); // И с окна
+               body.classList.remove('active');
+            }
+         });
+
+         const cards = document.querySelectorAll(".open-popup");
+         cards.forEach((card) => {
+            card.addEventListener("click", (e) => {
+               let targetEl = e.target;
+               let targetCardText = card.querySelector(".card__text");
+               let targetCardImage = card.querySelector(".card__image");
+               document.querySelector(".popup__text").textContent = targetCardText.textContent;
+               document.querySelector(".popup__image").src = targetCardImage.src;
+            });
+         });
+
+
+      </script>
+   </div>
+</body>
+
+</html>
